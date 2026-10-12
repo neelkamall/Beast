@@ -9,6 +9,7 @@ from app.routers.user_router import router as user_router
 from app.routers.post_router import router as post_router
 from app.routers.comment_router import router as comment_router
 from app.routers.likes_router import router as like_router
+from app.routers.ai_router import router as ai_router
 
 Base.metadata.create_all(bind=engine)
 
@@ -18,6 +19,7 @@ app.include_router(user_router)
 app.include_router(post_router)
 app.include_router(comment_router)
 app.include_router(like_router)
+app.include_router(ai_router)
 
 
 @app.get("/")
